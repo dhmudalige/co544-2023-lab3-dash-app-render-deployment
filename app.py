@@ -50,9 +50,11 @@ app.layout = html.Div(
     children=[
     
     html.H1('CO544-2023 Lab 3: Wine Quality Prediction'),
-    
+    html.Br(),
+
     html.Div([
         html.H3('Exploratory Data Analysis'),
+        html.Br(),    
         html.Label('Feature 1 (X-axis)'),
         dcc.Dropdown(
             id='x_feature',
@@ -151,11 +153,13 @@ app.layout = html.Div(
     ]),
 
     html.Br(),
+    html.Br(),
 
     html.Div([
         html.H4("Predicted Quality"),
         html.Br(),
-        html.Div(id='prediction-output')
+        dbc.Alert(id='prediction-output', color="warning")
+        # html.Div(id='prediction-output')
     ])
 ])
 
